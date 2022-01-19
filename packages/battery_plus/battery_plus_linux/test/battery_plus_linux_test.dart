@@ -21,6 +21,14 @@ void main() {
     expect(battery.batteryLevel, completion(equals(57)));
   });
 
+  test('battery state', () async {
+    final battery = BatteryPlusLinux();
+    battery.createDevice = () {
+      return MockDevice();
+    };
+    expect(battery.batteryState, completion(BatteryState.charging));
+  });
+
   test('battery state changes', () {
     final battery = BatteryPlusLinux();
     battery.createDevice = () {
@@ -47,9 +55,6 @@ class MockDevice implements UPowerDevice {
 
   @override
   DBusClient get client => throw UnimplementedError();
-
-  @override
-  String get destination => throw UnimplementedError();
 
   @override
   void dispose() {}
@@ -82,6 +87,9 @@ class MockDevice implements UPowerDevice {
   Future<DBusIntrospectNode> introspect() {
     throw UnimplementedError();
   }
+
+  @override
+  String get name => throw UnimplementedError();
 
   @override
   DBusObjectPath get path => throw UnimplementedError();

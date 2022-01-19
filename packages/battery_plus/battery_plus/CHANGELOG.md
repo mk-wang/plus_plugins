@@ -1,3 +1,11 @@
+## 2.1.0
+
+- Add batteryState getter
+
+## 2.0.2
+
+- Update Flutter dependencies
+
 ## 2.0.1
 
 - Upgrade Android compile SDK version
