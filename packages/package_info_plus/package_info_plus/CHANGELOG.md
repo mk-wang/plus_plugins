@@ -1,3 +1,13 @@
+## 1.4.0
+
+- Android: Migrate to Kotlin
+- Android: Update dependencies, build config updates
+- Android: Fix project title
+
+## 1.3.1
+
+- Fix embedding issue in example
+
 ## 1.3.0
 
 - Removed deprecated embeddingV1 function

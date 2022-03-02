@@ -1,3 +1,12 @@
+## 1.3.0
+
+- Android: Migrate to Kotlin
+- Android: Update dependencies, build config updates
+
+## 1.2.2
+
+- Fix example embedding issues
+
 ## 1.2.1
 
 - Upgrade Android compile SDK version
