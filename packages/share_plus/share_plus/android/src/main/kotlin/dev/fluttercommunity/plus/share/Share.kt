@@ -48,8 +48,7 @@ internal class Share(private val context: Context?, private var activity: Activi
       putExtra(Intent.EXTRA_SUBJECT, subject)
     }
 
-    val chooserIntent = Intent.createChooser(shareIntent, null /* dialog title optional */)
-    startActivity(chooserIntent)
+    startActivity(shareIntent)
   }
 
   @Throws(IOException::class)
